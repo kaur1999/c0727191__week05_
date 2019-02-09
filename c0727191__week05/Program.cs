@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace c0727191__week05
 {
+
     class Program
 
     {
@@ -60,17 +61,29 @@ namespace c0727191__week05
 
             FirstFloor = new Node();
 
-            FirstFloor.FloorNumber = "First Floor";
+            SecondFloor = new Node();
 
-            Console.WriteLine("floor number is {0} ", FirstFloor.FloorNumber);
+            ThirdFloor = new Node();
+
+            FourthFloor = new Node();
+
+
+
+            FirstFloor.FloorNumber = "First Floor";
 
             FirstFloor.elevatorUp = SecondFloor;
 
             SecondFloor.FloorNumber = "Second Floor";
 
+            SecondFloor.elevatorUp = ThirdFloor;
 
+            ThirdFloor.FloorNumber = "Third Floor";
 
-            Console.WriteLine("floor number is {0} ", SecondFloor.FloorNumber);
+            ThirdFloor.elevatorUp = FourthFloor;
+
+            FourthFloor.FloorNumber = "Fourth Floor";
+
+            FourthFloor.elevatorUp = null;
 
         }
 
